@@ -39,7 +39,12 @@ pip install gunicorn
 gunicorn 是一个Python编写的WSGI UNIX服务器，适用于Linux系平台
 
 ```shell
-gunicorn hello --log-file-
+hostname@ubuntu:~$ gunicorn hello_wsgi --log-file=-
+[2018-07-22 22:14:56 -0700] [14270] [INFO] Starting gunicorn 19.9.0
+[2018-07-22 22:14:56 -0700] [14270] [INFO] Listening at: http://127.0.0.1:8000 (14270)
+[2018-07-22 22:14:56 -0700] [14270] [INFO] Using worker: sync
+[2018-07-22 22:14:56 -0700] [14273] [INFO] Booting worker with pid: 14273
+...
 ```
 
 
