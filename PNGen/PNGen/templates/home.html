@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charser="utf-8">
+    <title>Django PNGen Server</title>
+    <link rel="stylesheet" href="{% static 'site.css' %}" type="text/css">
+</head>
+<body>
+    <h1>Django PNG Generate Images</h1>
+    <p>This server can be used for serving blank png </p>
+    <p>To request a blank png image, simply GET:</p>
+    <b>/image/&lt;width&gt;x&lt;height&gt;/</b>
+    <p>such as: </p>
+    <pre>
+        &lt;img src="{{example}}" &gt;
+    </pre>
+    <h2> Examples</h2>
+    <ul>
+        <li><img src="{% url 'pngHolder' width=50 height=50%}"></li>
+        <li><img src="{% url 'pngHolder' width=200 height=50%}"></li>
+        <li><img src="{% url 'pngHolder' width=50 height=400%}"></li>
+    </ul>
+</body>
+</html>
