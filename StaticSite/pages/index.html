@@ -1,0 +1,28 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome to the site</h1>
+        <p>Insert something here</p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>About</h2>                
+                <p>{% lorem %}</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Contact</h2>
+                <p>{% lorem %}</p>
+                <p>
+                    <a class="btn btn-default" href="{% url 'page' 'contact' %}" role="button"> Contact us >> </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+    <footer>
+        <dir class="container">
+            <p>&copy; Rapid Dev {% now 'Y' %}</p>
+        </dir>
+    </footer>
+</div>
