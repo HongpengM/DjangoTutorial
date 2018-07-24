@@ -13,9 +13,14 @@ DEBUG = os.environ.get('DEBUG', 'on') == 'on'
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', '3@ri6j0y@!01vhg1nay1y ^ fkhq - gzazh@yp@r(yu) % owu_4bkz')
 ALLOWED_HOSTS = os.environ.get(
-    'ALLOWED_HOSTS', 'localhost').split(',').append('127.0.0.1')
+    'ALLOWED_HOSTS', 'localhost').split(',')
 BASE_DIR = os.path.dirname(__file__)
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 settings.configure(
     DEBUG=DEBUG,
     SECRET_KEY=SECRET_KEY,
@@ -27,6 +32,7 @@ settings.configure(
     INSTALLED_APPS=(
         'django.contrib.staticfiles',
     ),
+    DATABASES=DATABASES,
     TEMPLATES=(
         {
             'BACKEND': 'django.template.backends.django.DjangoTemplates',
