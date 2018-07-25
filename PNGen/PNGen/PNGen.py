@@ -13,7 +13,8 @@ DEBUG = os.environ.get('DEBUG', 'on') == 'on'
 SECRET_KEY = os.environ.get(
     'SECRET_KEY', '3@ri6j0y@!01vhg1nay1y ^ fkhq - gzazh@yp@r(yu) % owu_4bkz')
 ALLOWED_HOSTS = os.environ.get(
-    'ALLOWED_HOSTS', 'localhost').split(',')
+    'ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+print(ALLOWED_HOSTS)
 BASE_DIR = os.path.dirname(__file__)
 DATABASES = {
     'default': {
