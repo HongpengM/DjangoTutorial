@@ -1,0 +1,4 @@
+django_filter==2.0.0
+Django==2.0.7
+django_filters==0.2.1
+djangorestframework==3.8.2
